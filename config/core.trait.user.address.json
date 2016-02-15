@@ -1,0 +1,134 @@
+{
+	"properties": {
+		"address_level_1": {
+			"type": "string",
+			"required": false,
+			"label": {
+				"en": "Civic Address (Level 1)",
+				"fr": "Adresse Civique (Niveau 1)"
+			},
+			"description": {
+				"en": "A precise street address.",
+				"fr": "Une adresse précise."
+			}
+		},
+		"address_level_2": {
+			"type": "string",
+			"required": false,
+			"label": {
+				"en": "Civic Address (Level 2)",
+				"fr": "Adresse Civique (Niveau 2)"
+			},
+			"description": {
+				"en": "Additional civic address information.",
+				"fr": "Informations d'adresse supplémentaires."
+			}
+		},
+		"locality": {
+			"type": "string",
+			"required": false,
+			"label": {
+				"en": "Municipality",
+				"fr": "Municipalité"
+			},
+			"description": {
+				"en": "An incorporated city or town political entity.",
+				"fr": "Une cité ou une ville d'ordre politique."
+			}
+		},
+		"administrative_area_level_1": {
+			"type": "string",
+			"required": false,
+			"label": {
+				"en": "Administrative Area (Level 1)",
+				"fr": "Division Administrative (Niveau 1)"
+			},
+			"description": {
+				"en": "A province, a state, or a territory.",
+				"fr": "Une province, un état, ou un territoire."
+			}
+		},
+		"administrative_area_level_2": {
+			"type": "string",
+			"required": false,
+			"label": {
+				"en": "Administrative Area (Level 2)",
+				"fr": "Division Administrative (Niveau 2)"
+			},
+			"description": {
+				"en": "A county, an administrative region, a metropolitan community, or a municipal district.",
+				"fr": "Un comté, une région administrative, une communauté métropolitaine ou d'un district municipal."
+			}
+		},
+		"postal_code": {
+			"type": "string",
+			"required": false,
+			"label": {
+				"en": "Postal Code",
+				"fr": "Code Postal"
+			},
+			"description": {
+				"en": "An area identifier used to address postal mail within the country.",
+				"fr": "Un identifiant de zone utilisée pour traiter le courrier postal dans le pays."
+			}
+		},
+		"country": {
+			"type": "string",
+			"required": false,
+			"label": {
+				"en": "Country",
+				"fr": "Pays"
+			},
+			"description": {
+				"en": "A national political entity.",
+				"fr": "Une entité politique nationale"
+			}
+		}
+	},
+
+	"forms": {
+		"admin": {
+			"groups": {
+				"user-address": {
+					"label": {
+						"en": "User Address",
+						"fr": "Adresse de l'utilisateur"
+					},
+					"properties": [
+						"address_level_1",
+						"address_level_2",
+						"locality",
+						"administrative_area_level_1",
+						"administrative_area_level_2",
+						"postal_code",
+						"country"
+					],
+					"properties_options": {
+						"address_level_1": {
+							"read_only": true
+						},
+						"address_level_2": {
+							"read_only": true
+						},
+						"locality": {
+							"read_only": true
+						},
+						"administrative_area_level_1": {
+							"read_only": true
+						},
+						"administrative_area_level_2": {
+							"read_only": true
+						},
+						"postal_code": {
+							"read_only": true
+						},
+						"country": {
+							"read_only": true
+						}
+					},
+					"hidden": true
+				}
+			}
+		}
+	}
+}

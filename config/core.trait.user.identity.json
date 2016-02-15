@@ -1,0 +1,131 @@
+{
+	"properties": {
+		"email": {
+			"type": "email",
+			"active": false,
+			"required": false,
+			"unique": false,
+			"label": {
+				"en": "Email Address",
+				"fr": "Adresse Courriel"
+			}
+		},
+		"telephone": {
+			"type": "phone",
+			"active": false,
+			"required": false,
+			"unique": false,
+			"label": {
+				"en": "Telephone Number",
+				"fr": "Numéro de téléphone"
+			}
+		},
+		"gender": {
+			"type": "choice",
+			"active": false,
+			"required": false,
+			"label": {
+				"en": "Gender",
+				"fr": "Sexe"
+			},
+			"choices": {
+				"organisation": {
+					"active": false,
+					"label": {
+						"en": "Entity (Collective or Business)",
+						"fr": "Entité (Organisation ou compagnie)"
+					}
+				},
+				"intersex": {
+					"label": {
+						"en": "Non-Binary",
+						"fr": "Non-Binaire"
+					}
+				},
+				"male": {
+					"label": {
+						"en": "Male",
+						"fr": "Homme"
+					}
+				},
+				"female": {
+					"label": {
+						"en": "Female",
+						"fr": "Femme"
+					}
+				}
+			},
+			"allow_null": true,
+			"null_value": "unknown",
+			"null_label": {
+				"en": "Decline to state",
+				"fr": "Refuser de préciser"
+			}
+		},
+		"name": {
+			"type": "string",
+			"active": true,
+			"required": false,
+			"label": {
+				"en": "Personal Name",
+				"fr": "Nom Personnel"
+			}
+		},
+		"name_first": {
+			"type": "string",
+			"active": false,
+			"required": false,
+			"label": {
+				"en": "First Name",
+				"fr": "Prénom"
+			}
+		},
+		"name_last": {
+			"type": "string",
+			"active": false,
+			"required": false,
+			"label": {
+				"en": "Last Name",
+				"fr": "Nom"
+			}
+		}
+	},
+
+	"forms": {
+		"admin": {
+			"groups": {
+				"user-identity": {
+					"label": {
+						"en": "User Identity",
+						"fr": "Identité de l'utilisateur"
+					},
+					"properties": [
+						"email",
+						"telephone",
+						"name_personal",
+						"name_first",
+						"name_last"
+					],
+					"properties_options": {
+						"email": {
+							"read_only": true
+						},
+						"telephone": {
+							"read_only": true
+						},
+						"name": {
+							"read_only": true
+						},
+						"name_first": {
+							"read_only": true
+						},
+						"name_last": {
+							"read_only": true
+						}
+					},
+					"hidden": true
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"properties": {
+		"organization": {
+			"type": "string",
+			"active": false,
+			"required": false,
+			"label": {
+				"en": "Organization Name",
+				"fr": "Nom de l'organisation"
+			},
+			"description": {
+				"en": "Group, collective, enteprise…",
+				"fr": "Groupe, collective, entreprise…"
+			}
+		},
+		"title": {
+			"type": "string",
+			"active": false,
+			"required": false,
+			"label": {
+				"en": "Title",
+				"fr": "Titre"
+			},
+			"description": {
+				"en": "Within the organization or enterprise, e.g.: president, CTO, pblicist…",
+				"fr": "Au sein de l'organisation ou l'entreprise, e.g,&nbsp;: président, CTO, publiciste…"
+			}
+		}
+	},
+
+	"forms": {
+		"admin": {
+			"groups": {
+				"user-organization": {
+					"label": {
+						"en": "User Organization",
+						"fr": "Organisation de l'utilisateur"
+					},
+					"properties": [
+						"organization",
+						"title"
+					],
+					"properties_options": {
+						"organization": {
+							"read_only": true
+						},
+						"title": {
+							"read_only": true
+						}
+					},
+					"hidden": true
+				}
+			}
+		}
+	}
+}

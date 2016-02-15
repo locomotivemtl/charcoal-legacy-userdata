@@ -1,0 +1,78 @@
+{
+	"config_type": "object",
+	"config_version": 1,
+
+	"module": "core",
+
+	"name": {
+		"en": "User Rating Logs",
+		"fr": "Log des cotes d'internautes"
+	},
+	"description":{
+		"en": "A journal entry of a user's rating of an object.",
+		"fr": "Une entrée de journal de la note d'un internaute d'un objet."
+	},
+
+	"properties": {
+		"user_rating":{
+			"type": "integer",
+			"required": true,
+			"label":{
+				"en":"User Rating",
+				"fr":"Cote de l'internaute"
+			}
+		},
+		"user_comment": {
+			"type": "text",
+			"required": false,
+			"label": {
+				"en": "User Comment",
+				"fr": "Commentaire de l'internaute"
+			}
+		},
+		"event_type":{
+			"type": "choice",
+			"choices": {
+				"scale": {},
+				"polarity": {}
+			}
+		},
+		"active":{
+			"active": true
+		},
+		"data": {
+			"active": false
+		}
+	},
+
+	"sources": {
+		"default": {
+			"table": "charcoal_user_ratings"
+		}
+	},
+
+	"forms": {
+		"admin": {
+			"groups": {
+				"user-rating": {
+					"label": {
+						"en": "User Rating",
+						"fr": "Cote de l'internaute"
+					},
+					"properties": [
+						"user_rating",
+						"user_comment"
+					],
+					"properties_options": {
+						"user_rating": {
+							"read_only": true
+						},
+						"user_comment": {
+							"read_only": true
+						}
+					}
+				}
+			}
+		}
+	}
+}

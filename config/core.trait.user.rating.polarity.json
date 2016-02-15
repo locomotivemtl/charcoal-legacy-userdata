@@ -1,0 +1,67 @@
+{
+	"properties": {
+		"user_rating_positive": {
+			"type": "integer",
+			"active": true,
+			"rating_value": 1,
+			"label": {
+				"en": "Positive Ratings",
+				"fr": "Cotes Positives"
+			}
+		},
+		"user_rating_neutral": {
+			"type": "integer",
+			"active": false,
+			"rating_value": 0,
+			"label": {
+				"en": "Neutral Ratings",
+				"fr": "Cotes Neutres"
+			}
+		},
+		"user_rating_negative": {
+			"type": "integer",
+			"active": true,
+			"rating_value": -1,
+			"label": {
+				"en": "Negative Ratings",
+				"fr": "Cotes négatives"
+			}
+		}
+	},
+
+	"data": {
+		"rating_type": "polarity",
+		"user_rating_positive": 0,
+		"user_rating_neutral": 0,
+		"user_rating_negative": 0
+	},
+
+	"forms": {
+		"admin": {
+			"groups": {
+				"user-ratings": {
+					"label": {
+						"en": "User Ratings",
+						"fr": "Cotes des internautes"
+					},
+					"properties": [
+						"user_rating_positive",
+						"user_rating_neutral",
+						"user_rating_negative"
+					],
+					"properties_options": {
+						"user_rating_positive": {
+							"read_only": true
+						},
+						"user_rating_neutral": {
+							"read_only": true
+						},
+						"user_rating_negative": {
+							"read_only": true
+						}
+					}
+				}
+			}
+		}
+	}
+}

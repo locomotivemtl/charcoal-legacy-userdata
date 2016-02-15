@@ -1,0 +1,104 @@
+{
+	"properties": {
+		"date_created": {
+			"type": "datetime",
+			"label": {
+				"en": "Creation Date",
+				"fr": "Date de création"
+			},
+			"description": {
+				"en": "The date and time that the user entry was created.",
+				"fr": "La date et l'heure que l'entrée utilisateur a été créé."
+			}
+		},
+		"source_url": {
+			"type": "url",
+			"label": {
+				"en": "Source URL",
+				"fr": "URL de la source"
+			},
+			"description": {
+				"en": "The page that contained the form the user submitted.",
+				"fr": "La page contenant le formulaire que l'usager a soumis."
+			}
+		},
+		"session_id": {
+			"type": "string",
+			"label": {
+				"en": "Session ID",
+				"fr": "ID de la session"
+			}
+		},
+		"user_lang": {
+			"type": "lang",
+			"label": {
+				"en": "Source Language",
+				"fr": "Langue de la source"
+			}
+		},
+		"user_agent": {
+			"type": "string",
+			"label": {
+				"en": "User Agent",
+				"fr": "Agent Utilisateur"
+			},
+			"description": {
+				"en": "The agent often identifies itself, its application type, operating system, software vendor, or software revision, by submitting a characteristic identification string.",
+				"fr": "L'agent (le navigateur web) est identifié par une chaîne de type texte, son type d'application, le système d'exploitation, le fournisseur du logiciel, et la version du logiciel."
+			}
+		},
+		"user_ip": {
+			"type": "ip",
+			"label": {
+				"en": "Client IP Address",
+				"fr": "Adresse IP de l'application cliente"
+			},
+			"description": {
+				"en": "Of the user agent.",
+				"fr": "De l'application cliente."
+			}
+		}
+	},
+
+	"forms": {
+		"admin": {
+			"groups": {
+				"user-metadata": {
+					"label": {
+						"en": "User Entry Metadata",
+						"fr": "Métadonnées de l'entrée d'usager"
+					},
+					"properties": [
+						"date_created",
+						"source_url",
+						"session_id",
+						"user_agent",
+						"user_lang",
+						"user_ip"
+					],
+					"properties_options": {
+						"date_created": {
+							"read_only": true
+						},
+						"source_url": {
+							"read_only": true
+						},
+						"session_id": {
+							"read_only": true
+						},
+						"user_agent": {
+							"read_only": true
+						},
+						"user_lang": {
+							"read_only": true
+						},
+						"user_ip": {
+							"read_only": true
+						}
+					},
+					"hidden": true
+				}
+			}
+		}
+	}
+}

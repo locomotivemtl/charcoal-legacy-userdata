@@ -1,0 +1,100 @@
+{
+	"config_type": "object",
+	"config_version": 1,
+
+	"module": "core",
+
+	"name": {
+		"en": "Logs d'interactions d'internautes",
+		"fr": "User Entry Logs"
+	},
+	"description":{
+		"en": "A journal entry of a user's interaction with an object.",
+		"fr": "Une entrée de journal de l'interaction d'un internaute avec un objet."
+	},
+
+	"properties": {
+		"ts": {
+			"active": false,
+			"dev_note": "Replaced by date_created"
+		},
+		"ip": {
+			"active": false,
+			"dev_note": "Replaced by user_ip"
+		},
+		"lang": {
+			"active": false,
+			"dev_note": "Replaced by user_lang"
+		},
+		"active":{
+			"active": false
+		}
+	},
+
+	"lists": {
+		"admin": {
+			"label": {
+				"en": "List of journal logs",
+				"fr": "Liste des entrées du journal"
+			},
+			"properties": [
+				"id",
+				"obj_type",
+				"obj_id",
+				"event_type",
+				"date_created",
+				"user_ip",
+				"session_id",
+				"active"
+			],
+			"orders": {
+				"date_created": {
+					"property": "date_created",
+					"mode": "desc"
+				}
+			}
+		}
+	},
+	"default_list": "admin",
+
+	"forms": {
+		"admin": {
+			"read_only": true,
+			"label": {
+				"en": "Journal Log",
+				"fr": "Entrée de journal"
+			},
+			"groups": {
+				"log": {
+					"label": {
+						"en": "Log",
+						"fr": "Entrée"
+					},
+					"properties":[
+						"id",
+						"event_type",
+						"active"
+					],
+					"read_only": true,
+					"priority": 10
+				},
+				"object": {
+					"label": {
+						"en": "Object",
+						"fr": "Objet"
+					},
+					"properties": [
+						"obj_type",
+						"obj_id"
+					],
+					"read_only": true,
+					"priority": 20
+				},
+				"user-metadata": {
+					"priority": 30
+				}
+			}
+		}
+	},
+	"default_form": "admin"
+}
