@@ -64,7 +64,7 @@
 		},
 		"name": {
 			"type": "string",
-			"active": true,
+			"active": false,
 			"required": false,
 			"label": {
 				"en": "Personal Name",
