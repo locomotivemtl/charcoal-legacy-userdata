@@ -32,13 +32,15 @@
 		},
 		"event_type":{
 			"type": "choice",
+			"public_access": false,
 			"choices": {
 				"scale": {},
 				"polarity": {}
 			}
 		},
 		"active":{
-			"active": true
+			"active": true,
+			"public_access": false,
 		},
 		"data": {
 			"active": false

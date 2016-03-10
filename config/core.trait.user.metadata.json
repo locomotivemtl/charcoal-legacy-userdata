@@ -2,6 +2,7 @@
 	"properties": {
 		"date_created": {
 			"type": "datetime",
+			"public_access": false,
 			"label": {
 				"en": "Creation Date",
 				"fr": "Date de création"
@@ -13,6 +14,7 @@
 		},
 		"source_url": {
 			"type": "url",
+			"public_access": false,
 			"label": {
 				"en": "Source URL",
 				"fr": "URL de la source"
@@ -24,6 +26,7 @@
 		},
 		"session_id": {
 			"type": "string",
+			"public_access": false,
 			"label": {
 				"en": "Session ID",
 				"fr": "ID de la session"
@@ -31,6 +34,7 @@
 		},
 		"user_lang": {
 			"type": "lang",
+			"public_access": false,
 			"label": {
 				"en": "Source Language",
 				"fr": "Langue de la source"
@@ -38,6 +42,7 @@
 		},
 		"user_agent": {
 			"type": "string",
+			"public_access": false,
 			"label": {
 				"en": "User Agent",
 				"fr": "Agent Utilisateur"
@@ -49,6 +54,7 @@
 		},
 		"user_ip": {
 			"type": "ip",
+			"public_access": false,
 			"label": {
 				"en": "Client IP Address",
 				"fr": "Adresse IP de l'application cliente"
