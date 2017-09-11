@@ -148,10 +148,13 @@ trait Core_Trait_User_Rating_Polarity
 						obj_id = :obj_id';
 
 				try {
+					$obj_type = $this->obj_type();
+					$obj_id   = $this->id();
+
 					$sth = db()->prepare( $sql_query );
 
-					$sth->bindParam( ':obj_type', $this->obj_type() );
-					$sth->bindParam( ':obj_id', $this->id() );
+					$sth->bindParam( ':obj_type', $obj_type );
+					$sth->bindParam( ':obj_id', $obj_id );
 
 					$sth->execute();
 
@@ -163,7 +166,11 @@ trait Core_Trait_User_Rating_Polarity
 				}
 				catch ( PDOException $e ) {
 					Charcoal::debug([
-						'msg' => sprintf( 'Cannot load object list. PDO Error [%s]: "%s"', $e->getCode(), $$e->getMessage() )
+						'msg' => sprintf(
+							'Cannot load object list. PDO Error [%s]: "%s"',
+							$e->getCode(),
+							$$e->getMessage()
+						)
 					]);
 
 					$count = [];
